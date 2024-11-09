@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1224514908">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1224514908" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="${cross_rm} -rf" description="" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1224514908" name="Debug" parent="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug">
+					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1224514908." name="/" resourcePath="">
+						<toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug.155118600" name="Arm Cross GCC" superClass="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug">
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash.81450714" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting.846659603" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize.1011396857" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.966779810" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level" value="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.none" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength.1592963490" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar.2055300783" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections.1597879871" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections.473307480" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.884117631" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level" value="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.max" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.48927513" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.id.1935602186" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.id" value="1287942917" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name.610056927" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name" value="GNU Tools for ARM Embedded Processors" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.613771416" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.architecture" value="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.arm" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family.2062501" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.mcpu.cortex-m3" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.1915997994" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.thumb" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix.1991107233" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix" value="arm-none-eabi-" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.c.1846424642" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.c" value="gcc" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp.1974225409" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp" value="g++" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar.1226030489" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar" value="ar" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy.355115522" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy" value="objcopy" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump.1430130144" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump" value="objdump" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.size.1532537094" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.size" value="size" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.make.476428584" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.make" value="make" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm.352574166" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm" value="rm" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.GNU_ELF" id="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform.94401492" isAbstract="false" osList="all" superClass="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform"/>
+							<builder buildPath="${workspace_loc:/BluePill_FreeRtos_libopencm3_base}/Debug" id="ilg.gnuarmeclipse.managedbuild.cross.builder.1136838422" managedBuildOn="true" name="Gnu Make Builder.Debug" superClass="ilg.gnuarmeclipse.managedbuild.cross.builder"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.593398155" name="GNU Arm Cross Assembler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor.584959949" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor" value="true" valueType="boolean"/>
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.1653795157" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.840283505" name="GNU Arm Cross C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler">
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.466118347" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.676335994" name="GNU Arm Cross C++ Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.917069246" name="GNU Arm Cross C Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.gcsections.1002712562" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.gcsections" value="true" valueType="boolean"/>
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input.2067052311" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.660393920" name="GNU Arm Cross C++ Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections.1122243206" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections" value="true" valueType="boolean"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver.248514099" name="GNU Arm Cross Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash.1965043306" name="GNU Arm Cross Create Flash Image" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting.2043643141" name="GNU Arm Cross Create Listing" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source.1522710708" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.allheaders.213536626" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.allheaders" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.demangle.1045189334" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.demangle" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.linenumbers.1188168266" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.linenumbers" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.wide.1909428183" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.wide" value="true" valueType="boolean"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.73714399" name="GNU Arm Cross Print Size" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.printsize.format.1423104157" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.printsize.format"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.813930608">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.813930608" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="${cross_rm} -rf" description="" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.813930608" name="Release" parent="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release">
+					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.813930608." name="/" resourcePath="">
+						<toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.release.147109691" name="Arm Cross GCC" superClass="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.release">
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash.451967227" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting.726524570" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize.1922580239" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.1824074784" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level" value="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.size" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength.1632161216" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar.1162925555" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections.1618876195" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections.1855825308" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.1515714716" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.1317957668" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.id.2076856789" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.id" value="1287942917" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name.1409505957" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name" value="GNU Tools for ARM Embedded Processors" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.342066572" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.architecture" value="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.arm" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family.1608474197" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.mcpu.cortex-m3" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.977434269" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.thumb" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix.1013438955" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix" value="arm-none-eabi-" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.c.989180198" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.c" value="gcc" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp.955073459" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp" value="g++" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar.1810797848" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar" value="ar" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy.77305378" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy" value="objcopy" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump.252548167" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump" value="objdump" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.size.1203832958" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.size" value="size" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.make.1249146233" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.make" value="make" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm.32865403" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm" value="rm" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.GNU_ELF" id="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform.1651392850" isAbstract="false" osList="all" superClass="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform"/>
+							<builder buildPath="${workspace_loc:/BluePill_FreeRtos_libopencm3_base}/Release" id="ilg.gnuarmeclipse.managedbuild.cross.builder.1004280477" managedBuildOn="true" name="Gnu Make Builder.Release" superClass="ilg.gnuarmeclipse.managedbuild.cross.builder"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.904010940" name="GNU Arm Cross Assembler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor.294752850" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor" value="true" valueType="boolean"/>
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.940587180" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.977336518" name="GNU Arm Cross C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler">
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1609936088" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.864891600" name="GNU Arm Cross C++ Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.1573017311" name="GNU Arm Cross C Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.gcsections.1621620650" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.gcsections" value="true" valueType="boolean"/>
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input.1147325480" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.2038267667" name="GNU Arm Cross C++ Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections.549347391" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections" value="true" valueType="boolean"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver.1728689918" name="GNU Arm Cross Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash.1486641133" name="GNU Arm Cross Create Flash Image" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting.224762395" name="GNU Arm Cross Create Listing" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source.517814172" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.allheaders.556142120" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.allheaders" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.demangle.1986859547" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.demangle" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.linenumbers.1453395102" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.linenumbers" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.wide.2125469620" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.wide" value="true" valueType="boolean"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.589300136" name="GNU Arm Cross Print Size" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.printsize.format.786911267" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.printsize.format"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="BluePill_FreeRtos_libopencm3_base.ilg.gnuarmeclipse.managedbuild.cross.target.elf.1280107926" name="Executable" projectType="ilg.gnuarmeclipse.managedbuild.cross.target.elf"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1224514908;ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1224514908.;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.840283505;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.466118347">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.813930608;ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.813930608.;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.977336518;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1609936088">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+</cproject>
