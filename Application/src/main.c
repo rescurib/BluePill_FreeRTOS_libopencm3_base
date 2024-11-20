@@ -37,9 +37,12 @@ int main(void) {
 
 static void led_blink_handler(void* parameters)
 {
-    // Toggle the LED (PC13)
-    gpio_toggle(GPIOC, GPIO13);
+    for(;;)
+    {
+      // Toggle the LED (PC13)
+      gpio_toggle(GPIOC, GPIO13);
 
-    // delay
-    vTaskDelay(pdMS_TO_TICKS(1000));
+      // delay
+      vTaskDelay(pdMS_TO_TICKS(1000));
+    }
 }
