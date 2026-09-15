@@ -19,3 +19,8 @@ make TARGETS='stm32/f1'
 cd ./Projects/GCC
 make
 ```
+
+## Flash the firmware to the BluePill board
+```Bash
+make flash
+```

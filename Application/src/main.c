@@ -22,7 +22,8 @@ int main(void) {
     gpio_set_mode(GPIOC, GPIO_MODE_OUTPUT_2_MHZ,
                   GPIO_CNF_OUTPUT_PUSHPULL, GPIO13);
 
-    status = xTaskCreate(led_blink_handler,"Led Blink",16,NULL,2,&task_1_handle);
+    status = xTaskCreate(led_blink_handler, "Led Blink",
+               configMINIMAL_STACK_SIZE, NULL, 2, &task_1_handle);
     configASSERT(status == pdPASS);
 
     vTaskStartScheduler();
