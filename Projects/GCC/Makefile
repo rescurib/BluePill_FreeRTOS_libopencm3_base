@@ -1,3 +1,20 @@
+# =============================================================================
+# STM32 + FreeRTOS + libopencm3 base project Makefile
+# =============================================================================
+# This Makefile is designed to be portable across different STM32 devices.
+# In fact, it might be used for any Cortex-M3 device supported by libopencm3 and FreeRTOS.
+
+# =============================================================================
+
+# Particular BluePill project configuration
+DEVICE     ?= stm32f103c8t6
+MCU_FAMILY ?= f1
+CORTEX_M   ?= cortex-m3
+FPU		   ?= soft
+
+# =============================================================================
+# Project Configuration
+# =============================================================================
 
 OPENCM3_DIR := ../../Lib/libopencm3
 FREERTOS_DIR := ../../Middleware/FreeRTOS
@@ -9,14 +26,40 @@ SRC_DIR = ../../Application/src
 # all the files will be generated with this name (main.elf, main.bin, main.hex, etc)
 PROJECT_NAME=BlinkTask
 
+# =============================================================================
+# FreeRTOS Port Configuration
+# =============================================================================
+# Map Cortex-M core to port directory
+ifeq ($(CORTEX_M),cortex-m0)
+	FREERTOS_PORT = ARM_CM0
+else ifeq ($(CORTEX_M),cortex-m3)
+	FREERTOS_PORT = ARM_CM3
+else ifeq ($(CORTEX_M),cortex-m4)
+    ifneq ($(FPU),soft)
+		FREERTOS_PORT = ARM_CM4F
+	else
+		FREERTOS_PORT = ARM_CM4
+	endif
+else
+	$(error "Unsupported Cortex-M core: $(CORTEX_M)")
+endif
+
+# =============================================================================
+# Source files
+# =============================================================================
+
 SRC_FILES := $(wildcard $(SRC_DIR)/*.c)
 
 SRC_FILES += $(FREERTOS_DIR)/tasks.c
 SRC_FILES += $(FREERTOS_DIR)/list.c
 SRC_FILES += $(FREERTOS_DIR)/queue.c
 SRC_FILES += $(FREERTOS_DIR)/timers.c
-SRC_FILES += $(FREERTOS_DIR)/portable/GCC/ARM_CM3/port.c
+SRC_FILES += $(FREERTOS_DIR)/portable/GCC/$(FREERTOS_PORT)/port.c
 SRC_FILES += $(FREERTOS_DIR)/portable/MemMang/heap_4.c
+
+# =============================================================================
+# Include paths
+# =============================================================================
 
 # Application sources
 INCLUDES  = -I ../../Application/inc
@@ -24,27 +67,56 @@ INCLUDES  = -I ../../Application/inc
 
 INCLUDES += -I$(OPENCM3_DIR)/include
 INCLUDES += -I$(FREERTOS_DIR)/include
-INCLUDES += -I$(FREERTOS_DIR)/portable/GCC/ARM_CM3
+INCLUDES += -I$(FREERTOS_DIR)/portable/GCC/$(FREERTOS_PORT)
 
 #OBJECTS= $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.c=.o))
 #OBJECTS= $(addprefix $(OBJ_DIR)/, $($(subst ../../,,$(SRC_FILES)):.c=.o))
 OBJECTS = $(patsubst ../../%, $(OBJ_DIR)/%, $(SRC_FILES:.c=.o))
 $(info [New Changed] [$(OBJECTS)])
 
+# =============================================================================
+# Device-specific configuration
+# =============================================================================
+
 # Linker script for our MCU
-LDSCRIPT = stm32f103c8t6.ld
+LDSCRIPT = $(DEVICE).ld
 
 # Using the stm32f1 series chip
-TARGETS		:= stm32/f1
-LIBNAME		= opencm3_stm32f1
-DEFS		+= -DSTM32F1
+TARGETS		:= stm32/$(MCU_FAMILY)
+LIBNAME		= opencm3_stm32$(MCU_FAMILY)
 
-# Target-specific flags
-FP_FLAGS	?= -msoft-float
-ARCH_FLAGS	= -mthumb -mcpu=cortex-m3 $(FP_FLAGS)
+# Define de MCU family macro
+MCU_FAMILY_UPPER = $(shell echo $(MCU_FAMILY) | tr '[:lower:]' '[:upper:]')
+DEFS		+= -DSTM32$(MCU_FAMILY_UPPER)
+
+# =============================================================================
+# Target Architecture Flags
+# =============================================================================
+
+#FPU configuration - automatically select FPU type based on core
+ifeq ($(FPU), hard)
+	FP_FLAGS = -mfloat-abi=hard -mfpu=fpv4-sp-d16
+else ifeq ($(FPU), softfp)
+	FP_FLAGS = -mfloat-abi=softfp -mfpu=fpv4-sp-d16
+else
+	FP_FLAGS = -mfloat-abi=soft
+endif
+
+ARCH_FLAGS	= -mthumb -mcpu=$(CORTEX_M) $(FP_FLAGS)
+
+# =============================================================================
+# Toolchain Configuration
+# =============================================================================
 
 # Compiler configuration
 PREFIX		?= arm-none-eabi
+
+# Quiet/verbose build control
+ifeq ($(V),1)
+	Q :=
+else
+	Q := @
+endif
 
 CC		:= $(PREFIX)-gcc
 CXX		:= $(PREFIX)-g++
@@ -60,6 +132,10 @@ OPT		:= -Os
 DEBUG	:= -ggdb3
 CSTD	?= -std=c99
 
+# =============================================================================
+# Compiler Flags
+# =============================================================================
+
 # C flags
 TGT_CFLAGS	+= $(OPT) $(CSTD) $(DEBUG)
 TGT_CFLAGS	+= $(ARCH_FLAGS)
@@ -71,6 +147,10 @@ TGT_CFLAGS	+= -fno-common -ffunction-sections -fdata-sections
 TGT_CPPFLAGS	+= -MD
 TGT_CPPFLAGS	+= -Wall -Wundef
 TGT_CPPFLAGS	+= $(DEFS)
+
+# =============================================================================
+# Linker Flags and Libraries
+# =============================================================================
 
 # Linker flags
 TGT_LDFLAGS		+= --static -nostartfiles
@@ -88,6 +168,10 @@ DEFS		+= $(INCLUDES)
 LDFLAGS		+= -L$(OPENCM3_DIR)/lib
 LDLIBS		+= -l$(LIBNAME)
 LDLIBS		+= -Wl,--start-group -lc -lgcc -lnosys -Wl,--end-group
+
+# =============================================================================
+# Build Rules
+# =============================================================================
 
 all: libopencm3 freertos $(BIN_DIR)/$(PROJECT_NAME).bin
 

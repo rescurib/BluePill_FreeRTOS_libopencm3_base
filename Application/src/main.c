@@ -37,6 +37,9 @@ int main(void) {
 
 static void led_blink_handler(void* parameters)
 {
+
+    (void)parameters; // Unused parameter
+    
     for(;;)
     {
       // Toggle the LED (PC13)
