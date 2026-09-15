@@ -6,6 +6,8 @@
 
 # =============================================================================
 
+.DEFAULT_GOAL := all
+
 # Particular BluePill project configuration
 DEVICE     ?= stm32f103c8t6
 MCU_FAMILY ?= f1
@@ -79,7 +81,9 @@ $(info [New Changed] [$(OBJECTS)])
 # =============================================================================
 
 # Linker script for our MCU
-LDSCRIPT = $(DEVICE).ld
+LDSCRIPT = generated.$(DEVICE).ld
+DEVICES_DATA = $(OPENCM3_DIR)/ld/devices.data
+include $(OPENCM3_DIR)/mk/genlink-rules.mk
 
 # Using the stm32f1 series chip
 TARGETS		:= stm32/$(MCU_FAMILY)
@@ -187,6 +191,8 @@ libopencm3:
 		exit 1; \
 		fi
 	$(Q)$(MAKE) -C $(OPENCM3_DIR) TARGETS=$(TARGETS)
+
+$(LDSCRIPT): | libopencm3
 
 freertos:
 	$(Q)if [ ! "`ls -A $(FREERTOS_DIR)`" ] ; then \
